@@ -1,0 +1,33 @@
+---
+title: "CV"
+site: workflowr::wflow_site
+output:
+  workflowr::wflow_html:
+    toc: false
+editor_options:
+  chunk_output_type: console
+---
+
+# CV
+
+## Dane osobowe
+- Imię i nazwisko: Robert Kubica  
+- Email: szybkie.zakola@gmail.com
+- Telefon: 213-742-069
+
+## Wykształcenie
+- 2023–obecnie: Informatyka
+- 2023: Rajdowiec
+- 2006: Mistrz Formuły 1
+
+## Umiejętności
+- Podstawy R
+- Excel
+- Podstawy SQL
+- Prawo jazdy kategorii B
+- Szczurołap
+
+## Projekty
+- Analiza danych aut w R
+- Projekt strony internetowej o alkoholach
+

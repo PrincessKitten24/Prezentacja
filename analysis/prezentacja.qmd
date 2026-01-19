@@ -1,0 +1,51 @@
+---
+title: "Prezentacja o zakolaku"
+author: "Oskar Walczyk"
+format: revealjs
+---
+
+## O mnie
+
+Mam na imię Oskar. Studiuję Informatykę i Inżynierię Danych na Uniwersytecie Przyrodniczym w Poznaniu. Jestem nerdem oraz introwertykiem, a czas spędzam głównie na graniu albo oglądaniu anime :3.
+
+## Gry
+
+::::: columns
+::: {.column width="60%"}
+**Gry Soulslike:** Uwielbiam wysoki poziom trudności i naukę na błędach. Seria *Dark Souls* czy *Elden Ring* to dla mnie trening cierpliwości i precyzji.
+
+**Rywalizacja (E-sport):** Regularnie bywam na Summoner’s Rift w **League of Legends** oraz na serwerach **CS-a**. Cenię sobie pracę zespołową i adrenalinę podczas ważnych meczów.
+:::
+
+::: {.column width="40%"}
+![](liga.jpg)
+:::
+:::::
+
+## Anime
+
+::::: columns
+::: {.column width="60%"}
+Mój dom rodzinny znajduje się w środku ogromnego lasu. Może przez to zawsze czułem i miałem bliskość natury. Uwielbiam wybierać się na spacery i po prostu obserwować przyrodę, czy chociażby podchodzić dziką zwierzynę oraz ją obserwować. Las to zawsze będzie dla mnie miejsce komfortu, oczywiście w dobrych warunkach pogodowych.
+:::
+
+::: {.column width="40%"}
+![](metal.jpg)
+:::
+:::::
+
+## Kotki
+
+::::: columns
+::: {.column width="60%"}
+Kto z nas nie lubi kotków. Każdy rodzaj kota jest moim ulubionym, nie ważne czy łysy czy gruby czy czarny. Jak już się wyprowadzę na swoje to zapewne będę miał jakiegoś kota a jak nie to kocicę :3
+:::
+
+::: {.column width="40%"}
+![](kot.jpg)
+:::
+:::::
+
+## Dziękuję za uwagę :3
+
+![](kot2.jpg)

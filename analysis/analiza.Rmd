@@ -1,0 +1,75 @@
+---
+title: "Analiza danych: Pasażerowie Titanica (Base R)"
+author: "Oskar Walczyk"
+output: workflowr::wflow_html
+---
+
+# Analiza Danych
+
+
+## Opis zbioru danych
+Analiza dotyczy pasażerów Titanica. Dane pochodzą z wbudowanego w R zbioru Titanic, który przekształcimy na ramkę danych, aby ułatwić obliczenia. Zbiór zawiera informacje o klasie podróży, płci, wieku oraz o tym, czy pasażer przeżył.
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
+
+# Konwersja wbudowanego zbioru na ramkę danych
+df <- as.data.frame(Titanic)
+# Rozszerzenie tabeli (częstotliwość występowania na pojedyncze wiersze)
+titanic_raw <- df[rep(1:nrow(df), df$Freq), -5]
+
+library(dplyr)
+podsumowanie <- df %>%
+  group_by(Class) %>%
+  summarise(Suma = sum(Freq))
+
+print(podsumowanie)
+```
+
+
+## 1. Przeżywalność pasażerów (Wykres kołowy)
+Sprawdzimy ogólny stosunek osób uratowanych do ofiar.
+
+```{r}
+survived_data <- aggregate(Freq ~ Survived, data = df, sum)
+
+pie(survived_data$Freq, 
+    labels = c("Zmarli", "Ocaleni"), 
+    col = c("firebrick", "dodgerblue"),
+    main = "Proporcja przeżycia katastrofy")
+```
+
+### Interpretacja:
+Wykres kołowy pokazuje, że większość osób na pokładzie niestety nie przeżyła katastrofy.
+
+
+## 2.Liczba pasażerów w klasach (Wykres słupkowy)
+Porównanie liczebności osób w poszczególnych klasach podróży.
+
+```{r}
+class_counts <- table(titanic_raw$Class)
+barplot(class_counts, 
+        main = "Liczba pasażerów w klasach",
+        xlab = "Klasa biletowa", 
+        ylab = "Liczba osób",
+        col = "darkorange",
+        border = "black")
+```
+
+### Interpretacja: 
+Najliczniejszą grupą byli pasażerowie trzeciej klasy oraz załoga (Crew), co było typowe dla dużych transatlantyków tamtego okresu.
+
+
+## 3. Płeć a przeżycie (Wykres mozaikowy)
+To bardzo zaawansowany wykres bazowy, który pokazuje zależność między dwiema cechami.
+
+
+```{r}
+mosaicplot(Survived ~ Sex, data = titanic_raw, 
+           main = "Zależność przeżycia od płci",
+           color = c("pink", "lightblue"),
+           shade = FALSE)
+```
+
+### Interpretacja:
+Powierzchnia prostokątów pokazuje, że wśród kobiet (Female) znacznie większa część osób przeżyła (dolny prostokąt) w porównaniu do mężczyzn.

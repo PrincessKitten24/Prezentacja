@@ -8,4 +8,12 @@ editor_options:
   chunk_output_type: console
 ---
 
-Welcome to my research website.
+## Cześć!
+
+Witam na mojej stronie, nazywam się Robert Kubica i jestem studentem Informatyki i Inżynierii Zakol.
+
+Dziś pokażę wam co zrobiłem w RStudio, czyli analize danych :3.
+
+
+![Uniwerek](up.jpg)
+
